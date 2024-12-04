@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de Photos Interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Galerie de Photos</h1>
+        <div class="thumbnails">
+            <img src="img1.png" alt="img" class="thumbnail" onclick="openModal(0)">
+            <img src="img2.png" alt="img" class="thumbnail" onclick="openModal(1)">
+            <img src="img3.png" alt="img" class="thumbnail" onclick="openModal(2)">
+            <img src="img4.png" alt="img" class="thumbnail" onclick="openModal(3)">
+            <img src="img5.png" alt="img" class="thumbnail" onclick="openModal(4)">
+            <img src="img6.png" alt="img" class="thumbnail" onclick="openModal(5)">
+            <img src="img7.png" alt="img" class="thumbnail" onclick="openModal(6)">
+            <img src="img8.png" alt="img" class="thumbnail" onclick="openModal(7)">
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="photoModal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <div class="modal-content">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <img id="modalImage" src="IMG/hotdog-g.png" alt="Photo">
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
